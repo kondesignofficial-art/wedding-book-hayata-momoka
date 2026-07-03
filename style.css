@@ -18,6 +18,7 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
@@ -1013,6 +1014,91 @@ figcaption {
   }
   50% {
     translate: 0 -6px;
+  }
+}
+
+@media (max-width: 759px) {
+  html,
+  body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  .profile-section {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+    padding-inline: 24px;
+  }
+
+  .profile-section .section-heading,
+  .profile-spread,
+  .profile-media,
+  .profile-text {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    overflow-x: hidden;
+  }
+
+  .profile-spread {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    justify-items: center;
+    gap: 40px;
+  }
+
+  .profile-media {
+    justify-self: stretch;
+  }
+
+  .profile-photo {
+    right: 0;
+  }
+
+  .profile-sub-photo {
+    right: 0;
+  }
+
+  .profile-caption {
+    left: 12px;
+    right: auto;
+    max-width: min(150px, calc(100vw - 72px));
+  }
+
+  .profile-text {
+    justify-self: center;
+    width: min(100%, 340px);
+    max-width: calc(100vw - 48px);
+    margin-inline: auto;
+    padding: 34px 0;
+    overflow: visible;
+    transform: none !important;
+  }
+
+  .profile-text.slide-left,
+  .profile-text.slide-right,
+  .profile-text.reveal,
+  .profile-text.is-visible {
+    transform: none !important;
+  }
+
+  .profile-text h3 {
+    max-width: 100%;
+    overflow-wrap: anywhere;
+    word-break: keep-all;
+    white-space: normal;
+  }
+
+  .profile-text dl,
+  .profile-text div,
+  .profile-text dt,
+  .profile-text dd {
+    max-width: 100%;
+    overflow-wrap: anywhere;
+    word-break: keep-all;
+    white-space: normal;
   }
 }
 
