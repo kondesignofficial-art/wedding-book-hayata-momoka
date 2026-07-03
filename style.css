@@ -1029,7 +1029,7 @@ figcaption {
     width: 100%;
     max-width: 100%;
     overflow-x: hidden;
-    padding-inline: 24px;
+    padding-inline: 0;
   }
 
   .profile-section .section-heading,
@@ -1047,10 +1047,16 @@ figcaption {
     grid-template-columns: minmax(0, 1fr);
     justify-items: center;
     gap: 40px;
+    width: calc(100vw - 48px);
+    max-width: 430px;
+    margin-right: auto;
+    margin-left: auto;
   }
 
   .profile-media {
     justify-self: stretch;
+    width: 100%;
+    max-width: 100%;
   }
 
   .profile-photo {
@@ -1069,11 +1075,13 @@ figcaption {
 
   .profile-text {
     justify-self: center;
-    width: min(100%, 340px);
-    max-width: calc(100vw - 48px);
+    box-sizing: border-box;
+    width: min(calc(100vw - 48px), 340px);
+    max-width: 340px;
     margin-inline: auto;
     padding: 34px 0;
     overflow: visible;
+    text-align: center;
     transform: none !important;
   }
 
