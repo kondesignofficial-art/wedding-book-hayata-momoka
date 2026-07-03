@@ -1032,7 +1032,6 @@ figcaption {
     padding-inline: 0;
   }
 
-  .profile-section .section-heading,
   .profile-spread,
   .profile-media,
   .profile-text {
@@ -1040,6 +1039,14 @@ figcaption {
     max-width: 100%;
     min-width: 0;
     overflow-x: hidden;
+  }
+
+  .profile-section .section-heading {
+    width: calc(100vw - 40px);
+    max-width: 430px;
+    margin-right: auto;
+    margin-left: auto;
+    overflow: visible;
   }
 
   .profile-spread {
@@ -1107,6 +1114,54 @@ figcaption {
     overflow-wrap: anywhere;
     word-break: keep-all;
     white-space: normal;
+  }
+
+  .gallery-section {
+    width: 100%;
+    max-width: 100%;
+    padding-right: 20px;
+    padding-left: 20px;
+    overflow-x: hidden;
+  }
+
+  .gallery-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 22px 16px;
+    width: 100%;
+    max-width: 100%;
+    overflow: visible;
+  }
+
+  .ranking-card {
+    min-width: 0;
+    max-width: 100%;
+    overflow: visible;
+  }
+
+  .ranking-card img {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .ranking-large {
+    grid-column: 1 / -1;
+  }
+
+  .tilt-left,
+  .tilt-right {
+    transform: none;
+  }
+
+  .tilt-right {
+    margin-top: 0;
+  }
+
+  .ranking-card figcaption {
+    width: 100%;
+    max-width: 100%;
+    white-space: normal;
+    overflow-wrap: anywhere;
+    word-break: keep-all;
   }
 }
 
