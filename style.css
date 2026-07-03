@@ -503,8 +503,22 @@ h3 {
 .profile-text {
   position: relative;
   z-index: 3;
-  padding: 34px 0;
+  width: min(100%, calc(100vw - 48px));
+  max-width: 430px;
+  margin-inline: auto;
+  padding: 34px 24px;
+  overflow: visible;
   text-align: center;
+}
+
+.profile-text h3,
+.profile-text dl,
+.profile-text div,
+.profile-text dt,
+.profile-text dd {
+  max-width: 100%;
+  overflow-wrap: anywhere;
+  word-break: normal;
 }
 
 .script-label {
@@ -1059,6 +1073,21 @@ figcaption {
 
   .profile-spread-reverse .profile-text {
     order: 1;
+  }
+
+  .profile-text {
+    width: auto;
+    max-width: none;
+    margin-inline: 0;
+    padding: 34px 0;
+  }
+
+  .profile-text h3,
+  .profile-text dl,
+  .profile-text div,
+  .profile-text dt,
+  .profile-text dd {
+    overflow-wrap: normal;
   }
 
   .profile-media {
